@@ -21,7 +21,7 @@ export const CouterApp = () => {
             ...counter,
             counter1: counter.counter1 + 1
         })
-      }>+1</button>
+      }>+1 sumarß</button>
     </>
   )
 }
