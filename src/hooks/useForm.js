@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 
 export const useForm = (initialForm = {}) => {
-    const [formState, setFormState] = useState(initialForm)
+    const [formState, setFormState] = useState(initialForm);
 
-    const onInputChangue = ({target: { value, name }}) => {
-        console.log(value, name);
-        setFormState({
-            ...formState,
+    const onInputChange = ({ target: { name, value } }) => {
+        setFormState(prevState => ({
+            ...prevState,
             [name]: value,
-        })
-    }
-    const onResetForm = () => {
-       
-        setFormState(initialForm)
-    }
+        }));
+    };
 
-  return {
-    formState,
-    onInputChangue,
-    onResetForm
-  }
-}
+    const onResetForm = () => {
+        setFormState(initialForm);
+    };
+
+    return {
+        ...formState, // Desestructurar para acceder directamente a las propiedades
+        formState,
+        onInputChange, // Corregí el nombre de la función
+        onResetForm
+    };
+};

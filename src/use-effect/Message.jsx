@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 export const Message = () => {
-    useEffect(() => {
+    useEffect(() => { 
         const onMouseMove = (event) => {
             console.log(event);
         }

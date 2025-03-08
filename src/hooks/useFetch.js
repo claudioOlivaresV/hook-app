@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useFetch = (url) => {
     const initialState = {
@@ -15,8 +15,8 @@ export const useFetch = (url) => {
     const setInitalstate = () => {
         setState(initialState)
     }
-     const getFectch = async() => {
-        setInitalstate();
+    const getFectch = async() => {
+       setInitalstate();
        const response = await fetch(url)
 
        await new Promise(resolve=> setTimeout(resolve, 2000))
@@ -28,7 +28,7 @@ export const useFetch = (url) => {
             hasError: true,
             error: {
                 code: response.status,
-                code: response.statusText,
+                message: response.statusText
             }
 
         })

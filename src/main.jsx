@@ -7,6 +7,8 @@ import { CounterCustomeHook } from './use-State/CounterCustomeHook'
 import { SimpleForm } from './use-effect/simpleForm'
 import { FormWithCustoHook } from './use-effect/FormWithCustomHook'
 import { MultipleCustomHook } from './examples/MultipleCustomHook'
+// import './useReducer/intro-reducer'
+import { TodoApp } from './useReducer/TodoApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <CounterCustomeHook /> */}
     {/* <CouterApp /> */}
     {/* <FormWithCustoHook /> */}
-    <MultipleCustomHook />
+    {/* <MultipleCustomHook /> */}
+    <TodoApp/>
     
   </React.StrictMode>,
 )
